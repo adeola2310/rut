@@ -7,16 +7,20 @@ import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
 
 export default class Register extends React.Component{
-state = {
-    firstName: '',
-    lastName: '',
-    country: '',
-    number: '',
-    email: '',
-    password: '',
-    status: '',
-    isDeleted: false,
-}
+  constructor(props){
+    super(props)
+    this.state = {
+      firstName: '',
+      lastName: '',
+      country: '',
+      number: '',
+      email: '',
+      password: '',
+      status: '',
+      isDeleted: false,
+    };
+  }
+  
 onChange = (e) => {
    if (e.target.name === 'isDeleted'){
      this.setState({
